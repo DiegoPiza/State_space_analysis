@@ -1,0 +1,12 @@
+---
+title: "Exploratory_script"
+output: html_document
+date: "2025-01-23"
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Importing TFR and visualizing
+
