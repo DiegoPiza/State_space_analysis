@@ -1,20 +1,10 @@
----
-title: "Exploratory_script"
-output: html_document
-date: "2025-01-23"
----
-
-```{r}
-knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(rhdf5)
 
-```
 
 ## Importing TFR and visualizing
 
-```{r}
-<<<<<<< HEAD
+
 # Define the file path
 file_path <- "C:/Users/Data Acquistion/OneDrive - The University of Western Ontario/PhD_Projects/Phase_reset/Results/TFR/Celestine/20190508/TFR_wavelet.mat"
 
@@ -24,8 +14,6 @@ file_path <- "C:/Users/Data Acquistion/OneDrive - The University of Western Onta
 
 # Read a specific dataset
 data <- h5read(file_path, "TFRwavelet")
-=======
 
->>>>>>> 74afb1c46c9a030b9eb3e61426c2f7e073c1d6cd
-```
+
 
