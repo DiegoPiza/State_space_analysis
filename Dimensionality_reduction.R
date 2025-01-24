@@ -32,9 +32,19 @@ Time<- data_structure$time
 glimpse(TFR)
 
 #Plotting parameters
-time_plot_range=1:10000 # in seconds
+time_plot_range=100000:500000 # in seconds
 channel=1
 Frequency=5
-p <- plot_ly(x=Time[time_plot_range],y = TFR[channel,Frequency,time_plot_range], type = 'scatter', mode = 'markers')
+#Plotting TFR
+p <- plot_ly(x=Time[time_plot_range],y = TFR[channel,Frequency,time_plot_range], type = 'scatter', mode = 'lines')
+p<- layout(p,title = paste("TFR ","Ch:",channel,"Freq.",Frequency,'Hz',time_plot_range[1],':',time_plot_range[length(
+  time_plot_range)],'s'))
+# Display the plot
+p
+#Plotting LFP
+p <- plot_ly(x=Time[time_plot_range],y = LFP[channel,time_plot_range], type = 'scatter', mode = 'lines')
+p<- layout(p,title = paste("LFP ","Ch:",channel,"Freq.",Frequency,'Hz',time_plot_range[1],':',time_plot_range[length(
+  time_plot_range)],'s'))
+# Display the plot
 p
 
